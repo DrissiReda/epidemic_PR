@@ -1,4 +1,4 @@
-# TP hpc
+# Epidemic Spreading Page Rank Simulation
 
 A very simple epidemic simulation using pageRank algorithm. 
 
@@ -58,4 +58,3 @@ For more details you can check help with
 ```sh
 python -m app.main -h
 ```
-# epidemic_PR

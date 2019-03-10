@@ -1,0 +1,11 @@
+appdirs==1.4.3
+attrs==18.2.0
+Click==7.0
+numpy==1.16.1
+pep8==1.7.1
+pip-autoremove==0.9.1
+pipdeptree==0.13.2
+toml==0.10.0
+scipy==1.2.1
+networkx==2.2
+black==18.9b0

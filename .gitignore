@@ -1,0 +1,11 @@
+/.idea/
+/venv/
+/.vscode/
+/report/bib.bib
+/report/report.bbl
+/report/report.log
+/report/report.toc
+/report/report.aux
+/report/report.blg
+/report/report.out
+/src/app/__pycache__
