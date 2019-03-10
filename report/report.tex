@@ -95,9 +95,35 @@ de la promenade aléatoire d’un individus sur internet (d'où le choix de l'op
   \item Le rang d’une page est la probabilité de la présence du promeneur sur cette page $\rightarrow$
     Le rand est la probabilité d’être infecté par le virus durant une épidémie
 \end{itemize}
+\newpage
 \subsection{Graphes}
 Nous avons receuilli plusieurs graphes de ce \label{site}{lien}, les fichiers contiennent des listes
-d'arrêtes, le test par défaut exécutera le graphe <> de taille <> et de densité <>.
+d'arrêtes, chaque ligne est sous la forme "a b" ou "a\hspace{1em}b" ou "a,b". Notre script peut
+détecter soit un espace, ou une virgule ou une tabulation comme délimiteur.\\
+Les sommets sont représentés comme des entiers, nos graphes sont dirigés, comme ça nous avons un
+meilleur résultat avec l'algorithme pageRank.\\
+La matrice de transition est créée depuis la matrice d'adjacence comme fait dans le cours.\\
+Le calcul de l'état stationnaire se fait par une méthode itérative, nous comparons le résultat
+de l'étape actuelle avec celui de l'étape précédente puis nous nous arrêtons si la différence est
+faible (le seuil d'erreur est $10^{-4}$ par défaut).\\
+Le test par défaut exécutera ces graphes:
+\begin{table}[ht!]
+\begin{tabular}{|c|c|c|c|}
+  \hline
+  Nom & Nb de sommets & Nb d'arrêtes & densité \\
+  \hline
+  email-Eu-core & 1005 & 25571 & 0.0506848\\
+  \hline
+  p2p-Gnutella08 & 6301 & 20777 & 0.0010467 \\
+  \hline
+  p2p-Gnutella09 & 8114 & 26013 & 0.0007903 \\
+  \hline
+  soc-sign-bitcoinalpha & 3783 & 24186 & 0.0030033 \\
+  \hline
+  wiki-Vote & 7115 & 103689 & 0.0040970 \\
+  \hline
+\end{tabular}
+\end{table}
 \newpage
 \subsection{Spécifications de la machine utilisée}
     \begin{itemize}[label=$\bullet$]
@@ -318,6 +344,12 @@ Le changement du pourcentage de vaccination vers $0.12$ et $0.32$ ne change pas 
 À chaque fois, l'algorithme pageRank commence à se stabiliser entre les itérations 20 et 40, si
 le pourcentage de vaccination est de $22\%$. Quand nous augmentons ce pourcentage, cette stabilisation
 peut changer mais que légèrement.
+\section{Conclusion}
+Pour conclure, les simulations faites durant ce projet ne permettent pas de représenter la réalité.
+Les paramètres que nous avons choisi de fixer ne sont pas suffisants, il faut prendre en compte
+plusieurs autres variables(la probabilité de tomber malade en ayant quand même le vaccin,
+la probabilité d’être contaminé n'est pas la même pour tous les individus, les pénuries, le coût du
+vaccin, l'habilité à vacciner des individus, etc).
 \bibliography{bib}{}
 \bibliographystyle{plain}
 
